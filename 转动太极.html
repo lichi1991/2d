@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height:196px;
+            border: 2px solid #000;
+            border-bottom: 200px solid #000;
+            position: relative;
+            margin: 100px auto;
+            border-radius: 50%;
+            animation: myfirst 3s infinite linear 0.5s; /* 3s 循环时间 infinite 永久循环 linear 线性变化*/
+        }
+        @keyframes myfirst{
+           to {transform: rotateZ(-360deg)}
+        }
+        div:before{
+            content: "";
+            width: 20px;height: 20px;border: 90px solid #fff;background: #000;
+            position: absolute;left: 0;top: 100px;
+            border-radius: 50%;
+        }
+        div:after{
+            content: "";
+            width: 20px;height: 20px;border: 90px solid #000;background: #fff;
+            position: absolute;right: 0;top: 100px;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div></div>
+</body>
+</html>
